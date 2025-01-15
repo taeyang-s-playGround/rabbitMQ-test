@@ -1,11 +1,11 @@
-package practice.rabbitMQ
+package practice.rabbitmq
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class RabbitMqApplication
+class RabbitmqApplication
 
 fun main(args: Array<String>) {
-	runApplication<RabbitMqApplication>(*args)
+	runApplication<RabbitmqApplication>(*args)
 }
