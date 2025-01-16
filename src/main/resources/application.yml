@@ -1,0 +1,30 @@
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: root
+    password: 070211
+
+logging:
+  level:
+    com.example : DEBUG
+    org:
+      hibernate:
+        type:
+          descriptor:
+            sql: trace
+
+cloud:
+  aws:
+    credentials:
+      access-key: ${AWS_ACCESS_KEY:a}
+      secret-key: ${AWS_SECRET_KEY:a}
+    s3:
+      bucket: kangsunbucket
+    region:
+      static: ap-northeast-2
+
+server:
+  servlet:
+    context-path: /rabbitmq
+
