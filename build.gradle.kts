@@ -40,12 +40,6 @@ dependencies {
 	//S3
 	implementation ("com.amazonaws:aws-java-sdk-s3:1.12.281")
 
-	//fcm
-	//implementation("com.google.firebase:firebase-admin:8.1.0")
-
-	//mysql
-	//runtimeOnly("com.mysql:mysql-connector-j")
-
 	//lombok
 	compileOnly("org.projectlombok:lombok")
 	annotationProcessor("org.projectlombok:lombok")
