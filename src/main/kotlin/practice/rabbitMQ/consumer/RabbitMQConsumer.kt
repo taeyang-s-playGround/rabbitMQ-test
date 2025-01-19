@@ -12,7 +12,9 @@ class RabbitMQConsumer(
     private val awsS3Adapter: AwsS3Adapter
 ) {
 
-    @RabbitListener(queues = [RabbitMQConfig.QUEUE_NAME])
+    //@RabbitListener 어노테이션이 붙은 메서드는 'IMAGE_S3_QUEUE'라는 이름의 메세지가 큐에 들어온다면,
+    //Spring AMQP가 이를 감지하여 자동으로 호출됨
+    @RabbitListener(queues = [RabbitMQConfig.IMAGE_S3_QUEUE])
     fun consumeFileUploadRequest(requests: List<FileUploadRequest>) {
         println("Processing file upload requests: ${requests.map { it.fileName }}")
 

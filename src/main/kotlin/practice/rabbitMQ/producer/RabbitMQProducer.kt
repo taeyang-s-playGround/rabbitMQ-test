@@ -10,7 +10,7 @@ class RabbitMQProducer(
 ) {
 
     fun sendFileUploadRequest(files: List<MultipartFile>) {
-        // 파일 데이터를 RabbitMQ 큐에 전송
+        // 파일 데이터를 RabbitMQ 큐에 전송함
         rabbitTemplate.convertAndSend(
             RabbitMQConfig.EXCHANGE_NAME,
             RabbitMQConfig.ROUTING_KEY,
